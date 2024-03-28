@@ -7,6 +7,7 @@ const CardList = () => {
       {beers.map((beer) => {
         return (
           <Card
+            key={beer.id}
             name={beer.name}
             img={beer.image_url}
             tagline={beer.tagline}
