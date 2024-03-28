@@ -1,5 +1,6 @@
+@use "../../Styles/variables" as *;
 .nav {
+  background-color: $nav-bgcolor;
   padding: 15px;
-  border: 2px solid red;
   width: 20%;
 }

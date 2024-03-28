@@ -3,11 +3,11 @@
   background-color: $card-bgcolor;
   display: flex;
   align-items: center;
-  border: 1px solid #545050;
+
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-  width: 370px;
+  width: 340px;
   height: 400px;
   margin: 10px;
 }

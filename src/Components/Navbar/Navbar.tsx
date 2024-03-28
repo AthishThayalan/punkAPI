@@ -1,8 +1,9 @@
+import FiltersList from "../FiltersList/FiltersList";
 import "./Navbar.scss";
 const Navbar = () => {
   return (
     <div className="nav">
-      <p>filter here ...</p>
+      <FiltersList />
     </div>
   );
 };
