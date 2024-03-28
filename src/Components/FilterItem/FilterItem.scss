@@ -13,10 +13,11 @@
 
 .filter__search {
   background-color: $filter-bgcolor;
+  outline: none;
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #363434;
+  border: 1px solid rgb(226, 203, 113);
   border-radius: 5px;
   font-size: 16px;
 }

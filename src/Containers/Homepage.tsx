@@ -9,7 +9,7 @@ const HomePage = () => {
           Explore a wide range of Brewdog beers with just a click!
         </p>
         <Link to="/beers">
-          <button className="enter-button">Enter</button>
+          <button className="enter-button">COME ON IN!</button>
         </Link>
       </section>
     </div>
