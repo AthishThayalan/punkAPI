@@ -1,7 +1,8 @@
 import "./Styles/styles.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./Containers/Homepage";
 import BeersPage from "./Containers/BeersPage";
+
 function App() {
   return (
     <BrowserRouter>

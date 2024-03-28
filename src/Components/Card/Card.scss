@@ -3,10 +3,10 @@
   background-color: $card-bgcolor;
   display: flex;
   align-items: center;
-
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   width: 340px;
   height: 400px;
   margin: 10px;
@@ -39,14 +39,18 @@
 
 .card__name {
   font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 5px;
   background-color: $card-bgcolor;
+  color: rgba(24, 17, 3, 0.854);
 }
 
 .card__tagline {
+  font-weight: 700;
   font-style: italic;
   margin-bottom: 5px;
   background-color: $card-bgcolor;
+  color: rgb(95, 67, 8);
 }
 
 .card__description {
