@@ -1,46 +1,56 @@
+@use "../../Styles/variables" as *;
 .card {
+  background-color: $card-bgcolor;
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #545050;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  width: 400px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  width: 380px;
   height: 400px;
   margin: 10px;
 }
 
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  color: red;
+  border-color: #000;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .card__image {
   flex: 1;
   padding: 10px;
+  background-color: $card-bgcolor;
 }
 
 .card__image img {
   width: 100px;
   height: 300px;
+  background-color: $card-bgcolor;
 }
 
 .card__details {
   flex: 2;
   padding: 10px;
+  background-color: $card-bgcolor;
 }
 
 .card__name {
   font-size: 1rem;
   margin-bottom: 5px;
+  background-color: $card-bgcolor;
 }
 
 .card__tagline {
   font-style: italic;
   margin-bottom: 5px;
+  background-color: $card-bgcolor;
 }
 
 .card__description {
   font-size: 0.8rem;
   line-height: 1.2;
+  background-color: $card-bgcolor;
 }
