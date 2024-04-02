@@ -2,6 +2,10 @@ import "./Homepage.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const HomePage = () => {
+  const playAudio = () => {
+    const audio = document.getElementById("audio") as HTMLAudioElement;
+    audio.play();
+  };
   return (
     <motion.div
       className="homepage"
@@ -15,9 +19,12 @@ const HomePage = () => {
           Explore a wide range of Brewdog beers with just a click!
         </p>
         <Link to="/beers">
-          <button className="enter-button">COME ON IN!</button>
+          <button className="enter-button" onClick={() => playAudio()}>
+            COME ON IN!
+          </button>
         </Link>
       </section>
+      <audio id="audio" src={"../assets/pageturn.mp3"}></audio>
     </motion.div>
   );
 };

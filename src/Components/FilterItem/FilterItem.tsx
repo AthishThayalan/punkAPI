@@ -7,10 +7,10 @@ const FilterItem = () => {
         type="text"
         placeholder="Search by beer name..."
       />
-      <div>
+      <div className="filter__select">
         <label className="filter__checkbox">
           <input type="checkbox" checked={true} />
-          High Alcohol (ABV 6%)
+          High Alcohol (ABV &gt; ?ts 6%)
         </label>
         <label className="filter__checkbox">
           <input type="checkbox" checked={false} />

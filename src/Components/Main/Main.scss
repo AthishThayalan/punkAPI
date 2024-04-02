@@ -1,6 +1,7 @@
 @use "../../Styles/variables" as *;
 .main {
-  background-color: $main-bgcolor;
+  background-image: url("../../assets/beer.png");
+  background-size: cover;
   padding: 15px;
   width: 80%;
   height: auto;
