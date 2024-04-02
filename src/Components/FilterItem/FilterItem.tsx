@@ -2,10 +2,16 @@ import "./FilterItem.scss";
 type FilterItemProps = {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  highAlcoholChecked: boolean;
+  classicRangeChecked: boolean;
+  highAcidityChecked: boolean;
 };
 const FilterItem = ({
   handleInputChange,
   handleCheckboxChange,
+  highAcidityChecked,
+  highAlcoholChecked,
+  classicRangeChecked,
 }: FilterItemProps) => {
   return (
     <div className="filter">
@@ -19,7 +25,8 @@ const FilterItem = ({
         <label className="filter__checkbox">
           <input
             type="checkbox"
-            checked={true}
+            name="highAlcohol"
+            checked={highAlcoholChecked}
             onChange={handleCheckboxChange}
           />
           High Alcohol (ABV &gt; ?ts 6%)
@@ -27,7 +34,8 @@ const FilterItem = ({
         <label className="filter__checkbox">
           <input
             type="checkbox"
-            checked={false}
+            name="classicRange"
+            checked={classicRangeChecked}
             onChange={handleCheckboxChange}
           />
           Classic Range (First brewed before 2010)
@@ -35,7 +43,8 @@ const FilterItem = ({
         <label className="filter__checkbox">
           <input
             type="checkbox"
-            checked={false}
+            name="highAcidity"
+            checked={highAcidityChecked}
             onChange={handleCheckboxChange}
           />
           High Acidity

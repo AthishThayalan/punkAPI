@@ -53,6 +53,9 @@ const BeersPage = () => {
       <Navbar
         handleInputChange={handleInputChange}
         handleCheckboxChange={handleCheckboxChange}
+        highAcidityChecked={highAcidityChecked}
+        highAlcoholChecked={highAlcoholChecked}
+        classicRangeChecked={classicRangeChecked}
       />
       <Main filteredBeers={filteredBeers} />
     </motion.div>
