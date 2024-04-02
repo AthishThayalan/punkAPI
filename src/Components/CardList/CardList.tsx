@@ -10,7 +10,7 @@ const CardList = ({ filteredBeers }: CardListProps) => {
   return (
     <section className="card-list">
       {filteredBeers.length === 0 ? (
-        <p className="no-beers-message">No beers available</p>
+        <p className="no-beers-message">No beers available . . .</p>
       ) : (
         filteredBeers.map((beer) => {
           return (

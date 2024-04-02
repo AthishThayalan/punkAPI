@@ -26,13 +26,21 @@ const NavbarMobile = ({
   return (
     <div className="nav-mobile">
       {showFilters ? (
-        <FilterItemMobile
-          handleInputChange={handleInputChange}
-          handleCheckboxChange={handleCheckboxChange}
-          highAcidityChecked={highAcidityChecked}
-          highAlcoholChecked={highAlcoholChecked}
-          classicRangeChecked={classicRangeChecked}
-        />
+        <>
+          <FilterItemMobile
+            handleInputChange={handleInputChange}
+            handleCheckboxChange={handleCheckboxChange}
+            highAcidityChecked={highAcidityChecked}
+            highAlcoholChecked={highAlcoholChecked}
+            classicRangeChecked={classicRangeChecked}
+          />
+          <img
+            src="src\assets\close-button.png"
+            alt=""
+            className="close-button"
+            onClick={toggleFilters}
+          />
+        </>
       ) : (
         <img
           src="src\assets\burger-menu.png"
