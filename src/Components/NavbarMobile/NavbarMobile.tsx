@@ -43,7 +43,7 @@ const NavbarMobile = ({
         </>
       ) : (
         <img
-          src="src\assets\burger-menu.png"
+          src="src\assets\filter-icon.png"
           alt=""
           className="menu-icon"
           onClick={toggleFilters}
