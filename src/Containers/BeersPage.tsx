@@ -25,6 +25,24 @@ const BeersPage = () => {
     setFilteredBeers(filtered);
   };
 
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const name = event.currentTarget.name;
+    const checked = event.currentTarget.checked;
+    switch (name) {
+      case "highAlcohol":
+        setHighAlcoholChecked(checked);
+        break;
+      case "classicRange":
+        setClassicRangeChecked(checked);
+        break;
+      case "highAcidity":
+        setHighAcidityChecked(checked);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <motion.div
       className="beer-page"
@@ -32,7 +50,10 @@ const BeersPage = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
-      <Navbar handleInputChange={handleInputChange} />
+      <Navbar
+        handleInputChange={handleInputChange}
+        handleCheckboxChange={handleCheckboxChange}
+      />
       <Main filteredBeers={filteredBeers} />
     </motion.div>
   );
