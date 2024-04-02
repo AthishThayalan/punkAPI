@@ -9,18 +9,23 @@ type CardListProps = {
 const CardList = ({ filteredBeers }: CardListProps) => {
   return (
     <section className="card-list">
-      {filteredBeers.map((beer) => {
-        return (
-          <Card
-            key={beer.id}
-            name={beer.name}
-            img={beer.image_url}
-            tagline={beer.tagline}
-            description={beer.description}
-          />
-        );
-      })}
+      {filteredBeers.length === 0 ? (
+        <p className="no-beers-message">No beers available</p>
+      ) : (
+        filteredBeers.map((beer) => {
+          return (
+            <Card
+              key={beer.id}
+              name={beer.name}
+              img={beer.image_url}
+              tagline={beer.tagline}
+              description={beer.description}
+            />
+          );
+        })
+      )}
     </section>
   );
 };
+
 export default CardList;

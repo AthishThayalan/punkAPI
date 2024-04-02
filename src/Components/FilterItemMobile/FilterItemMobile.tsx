@@ -1,4 +1,5 @@
-import "./FilterItem.scss";
+import { useState } from "react";
+import "./FilterItemMobile.scss";
 type FilterItemProps = {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleCheckboxChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -6,7 +7,7 @@ type FilterItemProps = {
   classicRangeChecked: boolean;
   highAcidityChecked: boolean;
 };
-const FilterItem = ({
+const FilterItemMobile = ({
   handleInputChange,
   handleCheckboxChange,
   highAcidityChecked,
@@ -14,15 +15,15 @@ const FilterItem = ({
   classicRangeChecked,
 }: FilterItemProps) => {
   return (
-    <div className="filter">
+    <div className="filter-mobile">
       <input
-        className="filter__search"
+        className="filter-mobile__search"
         type="text"
         placeholder="Search by name..."
         onChange={handleInputChange}
       />
-      <div className="filter__select">
-        <label className="filter__checkbox">
+      <div className="filter-mobile__select">
+        <label className="filter-mobile__checkbox">
           <input
             type="checkbox"
             name="highAlcohol"
@@ -31,16 +32,16 @@ const FilterItem = ({
           />
           High Alcohol (ABV &gt; 6%)
         </label>
-        <label className="filter__checkbox">
+        <label className="filter-mobile__checkbox">
           <input
             type="checkbox"
             name="classicRange"
             checked={classicRangeChecked}
             onChange={handleCheckboxChange}
           />
-          Classic Range (First brewed before 2010)
+          Classic Range
         </label>
-        <label className="filter__checkbox">
+        <label className="filter-mobile__checkbox">
           <input
             type="checkbox"
             name="highAcidity"
@@ -53,4 +54,4 @@ const FilterItem = ({
     </div>
   );
 };
-export default FilterItem;
+export default FilterItemMobile;

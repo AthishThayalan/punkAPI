@@ -4,3 +4,14 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.no-beers-message {
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+@media (max-width: 1023px) {
+  .card-list {
+    min-height: 100vh;
+  }
+}

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Beer } from "../Data/types";
 import beers from "../Data/beers";
+import NavbarMobile from "../Components/NavbarMobile/NavbarMobile";
 
 const BeersPage = () => {
   const [input, setInput] = useState<string>("");
@@ -72,14 +73,7 @@ const BeersPage = () => {
     ) {
       filtered = beers;
     }
-    if (
-      input.trim() === "" &&
-      !highAlcoholChecked &&
-      !classicRangeChecked &&
-      !highAcidityChecked
-    ) {
-      filtered = beers;
-    }
+
     setFilteredBeers(filtered);
   }, [highAlcoholChecked, classicRangeChecked, highAcidityChecked, input]);
 
@@ -91,6 +85,13 @@ const BeersPage = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
       <Navbar
+        handleInputChange={handleInputChange}
+        handleCheckboxChange={handleCheckboxChange}
+        highAcidityChecked={highAcidityChecked}
+        highAlcoholChecked={highAlcoholChecked}
+        classicRangeChecked={classicRangeChecked}
+      />
+      <NavbarMobile
         handleInputChange={handleInputChange}
         handleCheckboxChange={handleCheckboxChange}
         highAcidityChecked={highAcidityChecked}

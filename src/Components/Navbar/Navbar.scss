@@ -6,4 +6,11 @@
   border-right: 5px solid transparent;
   box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4);
   z-index: 1000;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    display: none;
+  }
 }
