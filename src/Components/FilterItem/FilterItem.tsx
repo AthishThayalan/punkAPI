@@ -1,11 +1,15 @@
 import "./FilterItem.scss";
-const FilterItem = () => {
+type FilterItemProps = {
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+const FilterItem = ({ handleInputChange }: FilterItemProps) => {
   return (
     <div className="filter">
       <input
         className="filter__search"
         type="text"
         placeholder="Search by beer name..."
+        onChange={handleInputChange}
       />
       <div className="filter__select">
         <label className="filter__checkbox">

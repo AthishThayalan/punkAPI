@@ -4,7 +4,27 @@ import "../Components/Navbar/Navbar.scss";
 import "../Components/Main/Main.scss";
 import "./BeersPage.scss";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Beer } from "../Data/types";
+import beers from "../Data/beers";
+
 const BeersPage = () => {
+  const [input, setInput] = useState<string>("");
+  const [filteredBeers, setFilteredBeers] = useState<Beer[]>([...beers]);
+  const [highAlcoholChecked, setHighAlcoholChecked] = useState<boolean>(false);
+  const [classicRangeChecked, setClassicRangeChecked] =
+    useState<boolean>(false);
+  const [highAcidityChecked, setHighAcidityChecked] = useState<boolean>(false);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = event.target.value;
+    setInput(inputValue);
+    const filtered = beers.filter((beer) =>
+      beer.name.toLowerCase().includes(inputValue.toLowerCase())
+    );
+    setFilteredBeers(filtered);
+  };
+
   return (
     <motion.div
       className="beer-page"
@@ -12,8 +32,8 @@ const BeersPage = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
-      <Navbar />
-      <Main />
+      <Navbar handleInputChange={handleInputChange} />
+      <Main filteredBeers={filteredBeers} />
     </motion.div>
   );
 };

@@ -1,10 +1,14 @@
 import FilterItem from "../FilterItem/FilterItem";
 import "./FiltersList.scss";
-const FiltersList = () => {
+
+type FiltersListProps = {
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+const FiltersList = ({ handleInputChange }: FiltersListProps) => {
   return (
     <div className="filterList">
       <h1>BREWDOG</h1>
-      <FilterItem />
+      <FilterItem handleInputChange={handleInputChange} />
     </div>
   );
 };

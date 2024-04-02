@@ -1,9 +1,13 @@
 import FiltersList from "../FiltersList/FiltersList";
 import "./Navbar.scss";
-const Navbar = () => {
+
+type NavbarProps = {
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+const Navbar = ({ handleInputChange }: NavbarProps) => {
   return (
     <div className="nav">
-      <FiltersList />
+      <FiltersList handleInputChange={handleInputChange} />
     </div>
   );
 };
