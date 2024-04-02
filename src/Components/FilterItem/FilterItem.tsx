@@ -29,7 +29,7 @@ const FilterItem = ({
             checked={highAlcoholChecked}
             onChange={handleCheckboxChange}
           />
-          High Alcohol (ABV &gt; ?ts 6%)
+          High Alcohol (ABV &gt; 6%)
         </label>
         <label className="filter__checkbox">
           <input
@@ -47,7 +47,7 @@ const FilterItem = ({
             checked={highAcidityChecked}
             onChange={handleCheckboxChange}
           />
-          High Acidity
+          High Acidity (pH &lt; 4)
         </label>
       </div>
     </div>
