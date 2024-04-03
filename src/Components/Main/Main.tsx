@@ -2,17 +2,23 @@ import "./Main.scss";
 import CardList from "../CardList/CardList";
 import { Beer } from "../../Data/types";
 import BeerPagination from "../BeerPagination/BeerPagination";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 type MainProps = {
   filteredBeers: Beer[];
 };
 const Main = ({ filteredBeers }: MainProps) => {
   const [pageStart, setPageStart] = useState<number>(0);
   const [pageEnd, setPageEnd] = useState<number>(6);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [numberOfResults, setNumberOfResults] = useState<number>(
+    filteredBeers.length
+  );
 
   const incrementPage = () => {
-    setPageStart((prevPageStart) => prevPageStart + 6);
-    setPageEnd((prevPageEnd) => prevPageEnd + 6);
+    if (pageEnd < filteredBeers.length) {
+      setPageStart((prevPageStart) => prevPageStart + 6);
+      setPageEnd((prevPageEnd) => prevPageEnd + 6);
+    }
   };
 
   const decrementPage = () => {
@@ -22,7 +28,9 @@ const Main = ({ filteredBeers }: MainProps) => {
     }
   };
 
-  const isLastPage = pageEnd >= filteredBeers.length;
+  useEffect(() => {
+    setCurrentPage((prevCurrentPage) => Math.floor(prevCurrentPage / 6) + 1);
+  }, [pageStart, pageEnd]);
 
   return (
     <div className="main">
@@ -35,8 +43,9 @@ const Main = ({ filteredBeers }: MainProps) => {
       <BeerPagination
         incrementPage={incrementPage}
         decrementPage={decrementPage}
-        isNextDisabled={isLastPage}
       />
     </div>
   );
 };
+
+export default Main;
