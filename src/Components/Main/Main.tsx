@@ -36,14 +36,14 @@ const Main = ({ filteredBeers, numberOfResults }: MainProps) => {
     <div className="main">
       <h1>Punk API</h1>
       <PageInfo currentPage={currentPage} numberOfResults={numberOfResults} />
+      <BeerPagination
+        incrementPage={incrementPage}
+        decrementPage={decrementPage}
+      />
       <CardList
         filteredBeers={filteredBeers}
         pageStart={pageStart}
         pageEnd={pageEnd}
-      />
-      <BeerPagination
-        incrementPage={incrementPage}
-        decrementPage={decrementPage}
       />
     </div>
   );
