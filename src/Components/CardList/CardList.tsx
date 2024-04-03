@@ -20,6 +20,7 @@ const CardList = ({ filteredBeers, pageStart, pageEnd }: CardListProps) => {
           return (
             <Card
               key={beer.id}
+              id={beer.id}
               name={beer.name}
               img={beer.image_url}
               tagline={beer.tagline}

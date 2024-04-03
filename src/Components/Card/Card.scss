@@ -20,6 +20,12 @@
   cursor: pointer;
 }
 
+.card.modal-open:hover {
+  box-shadow: none;
+  border-color: transparent;
+  transform: none;
+}
+
 .card__image {
   flex: 1;
   padding: 10px;

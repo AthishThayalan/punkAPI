@@ -1,0 +1,84 @@
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: rgb(236, 160, 38);
+  width: 100%;
+  height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 80%;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff8f8;
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+}
+
+.modal__image {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.modal__image img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.modal__details {
+  flex: 1 1 auto;
+}
+
+.modal__name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.modal__tagline {
+  font-style: italic;
+  color: rgb(77, 72, 72);
+  margin-bottom: 10px;
+}
+
+.modal__description {
+  margin-bottom: 20px;
+}
+
+.modal__ingredients,
+.modal__pairings {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.modal__ingredients h3,
+.modal__pairings h3 {
+  color: rgb(58, 54, 54);
+  margin-bottom: 10px;
+}
+
+.modal__brewers-tips {
+  font-style: italic;
+}
