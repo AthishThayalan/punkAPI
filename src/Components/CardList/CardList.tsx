@@ -4,15 +4,19 @@ import "./CardList.scss";
 
 type CardListProps = {
   filteredBeers: Beer[];
+  pageStart: number;
+  pageEnd: number;
 };
 
-const CardList = ({ filteredBeers }: CardListProps) => {
+const CardList = ({ filteredBeers, pageStart, pageEnd }: CardListProps) => {
+  const slicedBeers = filteredBeers.slice(pageStart, pageEnd);
+
   return (
     <section className="card-list">
-      {filteredBeers.length === 0 ? (
+      {slicedBeers.length === 0 ? (
         <p className="no-beers-message">No beers available . . .</p>
       ) : (
-        filteredBeers.map((beer) => {
+        slicedBeers.map((beer) => {
           return (
             <Card
               key={beer.id}

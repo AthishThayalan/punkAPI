@@ -1,0 +1,21 @@
+.beer-pagination {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.beer-pagination-button {
+  background-color: #b4632c;
+  color: #1b1464;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.beer-pagination-button:hover {
+  background-color: #f7dc6f;
+}
