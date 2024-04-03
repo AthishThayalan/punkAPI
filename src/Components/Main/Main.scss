@@ -1,5 +1,8 @@
 @use "../../Styles/variables" as *;
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../../assets/beer.png");
   background-size: cover;
   width: 80%;

@@ -1,12 +1,13 @@
 .beer-pagination {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 20px;
+  width: 80%;
 }
 
 .beer-pagination-button {
   background-color: #e3c013;
-  color: #1b1464;
+  color: #000000;
   border: 3px solid black;
   padding: 10px 20px;
   font-size: 16px;

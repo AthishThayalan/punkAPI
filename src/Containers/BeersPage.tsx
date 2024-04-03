@@ -16,6 +16,9 @@ const BeersPage = () => {
   const [classicRangeChecked, setClassicRangeChecked] =
     useState<boolean>(false);
   const [highAcidityChecked, setHighAcidityChecked] = useState<boolean>(false);
+  const [numberOfResults, setNumberOfResults] = useState<number>(
+    filteredBeers.length
+  );
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.currentTarget.value;
@@ -75,6 +78,7 @@ const BeersPage = () => {
     }
 
     setFilteredBeers(filtered);
+    setNumberOfResults(filtered.length);
   }, [highAlcoholChecked, classicRangeChecked, highAcidityChecked, input]);
 
   return (
@@ -98,7 +102,7 @@ const BeersPage = () => {
         highAlcoholChecked={highAlcoholChecked}
         classicRangeChecked={classicRangeChecked}
       />
-      <Main filteredBeers={filteredBeers} />
+      <Main filteredBeers={filteredBeers} numberOfResults={numberOfResults} />
     </motion.div>
   );
 };

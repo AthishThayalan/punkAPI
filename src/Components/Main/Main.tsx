@@ -6,14 +6,12 @@ import PageInfo from "../PageInfo/PageInfo";
 import { useEffect, useState } from "react";
 type MainProps = {
   filteredBeers: Beer[];
+  numberOfResults: number;
 };
-const Main = ({ filteredBeers }: MainProps) => {
+const Main = ({ filteredBeers, numberOfResults }: MainProps) => {
   const [pageStart, setPageStart] = useState<number>(0);
   const [pageEnd, setPageEnd] = useState<number>(6);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [numberOfResults, setNumberOfResults] = useState<number>(
-    filteredBeers.length
-  );
 
   const incrementPage = () => {
     if (pageEnd < filteredBeers.length) {
@@ -37,7 +35,7 @@ const Main = ({ filteredBeers }: MainProps) => {
   return (
     <div className="main">
       <h1>Punk API</h1>
-      <PageInfo currentPage={currentPage} />
+      <PageInfo currentPage={currentPage} numberOfResults={numberOfResults} />
       <CardList
         filteredBeers={filteredBeers}
         pageStart={pageStart}
