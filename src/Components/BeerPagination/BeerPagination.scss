@@ -20,3 +20,14 @@
 .beer-pagination-button:hover {
   background-color: #f7dc6f;
 }
+
+@media (max-width: 1023px) {
+  .beer-pagination-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    width: 120px;
+    height: 60px;
+  }
+}
