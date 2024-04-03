@@ -2,6 +2,7 @@ import "./Main.scss";
 import CardList from "../CardList/CardList";
 import { Beer } from "../../Data/types";
 import BeerPagination from "../BeerPagination/BeerPagination";
+import PageInfo from "../PageInfo/PageInfo";
 import { useEffect, useState } from "react";
 type MainProps = {
   filteredBeers: Beer[];
@@ -29,12 +30,14 @@ const Main = ({ filteredBeers }: MainProps) => {
   };
 
   useEffect(() => {
-    setCurrentPage((prevCurrentPage) => Math.floor(prevCurrentPage / 6) + 1);
+    const currentPage = Math.floor(pageStart / 6) + 1;
+    setCurrentPage(currentPage);
   }, [pageStart, pageEnd]);
 
   return (
     <div className="main">
       <h1>Punk API</h1>
+      <PageInfo currentPage={currentPage} />
       <CardList
         filteredBeers={filteredBeers}
         pageStart={pageStart}

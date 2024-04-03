@@ -1,8 +1,11 @@
 import "./PageInfo.scss";
-const PageInfo = () => {
+type PageInfoProps = {
+  currentPage: number;
+};
+const PageInfo = ({ currentPage }: PageInfoProps) => {
   return (
     <div className="page-info">
-      <p>0</p>
+      <p>Page {currentPage}</p>
     </div>
   );
 };
