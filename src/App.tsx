@@ -1,11 +1,11 @@
 import "./Styles/styles.scss";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Containers/Homepage";
 import BeersPage from "./Containers/BeersPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/punkapi">
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/beers" element={<BeersPage />}></Route>
