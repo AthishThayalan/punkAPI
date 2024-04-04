@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { MemoryRouter, BrowserRouter as Router } from "react-router-dom";
 import HomePage from "./Homepage";
 import userEvent from "@testing-library/user-event";
+import BeersPage from "./BeersPage";
+import { createMemoryHistory } from "history";
 
 describe("HomePage component", () => {
   it("should render correctly", () => {
@@ -24,10 +26,15 @@ describe("HomePage component", () => {
   });
 
   it("should navigate to BeersPage route when button is clicked", () => {
-    render(<HomePage />);
+    render(
+      <MemoryRouter initialEntries={["/"]}>
+        <HomePage />
+        <BeersPage />
+      </MemoryRouter>
+    );
+
     const buttonElement = screen.getByText("COME ON IN!");
     userEvent.click(buttonElement);
-
-    expect(window.location.href).toContain("/beers");
+    expect(screen.getByText("High Alcohol (ABV > 6%)")).toBeInTheDocument();
   });
 });
