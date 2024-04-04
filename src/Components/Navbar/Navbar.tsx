@@ -16,7 +16,7 @@ const Navbar = ({
   classicRangeChecked,
 }: NavbarProps) => {
   return (
-    <div className="nav">
+    <div className="nav" data-testid="navbar-component">
       <FiltersList
         handleInputChange={handleInputChange}
         handleCheckboxChange={handleCheckboxChange}

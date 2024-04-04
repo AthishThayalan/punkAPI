@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./NavbarMobile.scss";
 import FilterItemMobile from "../FilterItemMobile/FilterItemMobile";
+import filter from "../../assets/filter-icon.png";
+import closeButton from "../../assets/close-button.png";
 
 type NavbarProps = {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -35,7 +37,7 @@ const NavbarMobile = ({
             classicRangeChecked={classicRangeChecked}
           />
           <img
-            src="src\assets\close-button.png"
+            src={closeButton}
             alt=""
             className="close-button"
             onClick={toggleFilters}
@@ -43,7 +45,7 @@ const NavbarMobile = ({
         </>
       ) : (
         <img
-          src="src\assets\filter-icon.png"
+          src={filter}
           alt=""
           className="menu-icon"
           onClick={toggleFilters}

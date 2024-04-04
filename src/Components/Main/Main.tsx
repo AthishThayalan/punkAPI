@@ -33,7 +33,7 @@ const Main = ({ filteredBeers, numberOfResults }: MainProps) => {
   }, [pageStart, pageEnd]);
 
   return (
-    <div className="main">
+    <div className="main" data-testid="main-component">
       <h1>Punk API</h1>
       <PageInfo currentPage={currentPage} numberOfResults={numberOfResults} />
       <BeerPagination
