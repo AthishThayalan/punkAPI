@@ -14,7 +14,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, beer }) => {
   };
 
   return (
-    <div className="modal__overlay" onClick={onClose}>
+    <div className="modal__overlay" onClick={onClose} data-testid="modal">
       <div className="modal" onClick={stopPropagation}>
         <button className="modal__close" onClick={onClose}>
           X

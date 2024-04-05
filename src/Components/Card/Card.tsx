@@ -31,6 +31,7 @@ const Card = ({ name, img, tagline, description, id }: CardProp) => {
     <div
       className={`card ${isModalOpen ? "modal-open" : ""}`}
       onClick={openModal}
+      data-testid="card"
     >
       <div className="card__image">
         <img src={img} alt={name} />

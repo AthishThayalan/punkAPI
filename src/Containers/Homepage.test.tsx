@@ -3,7 +3,6 @@ import { MemoryRouter, BrowserRouter as Router } from "react-router-dom";
 import HomePage from "./Homepage";
 import userEvent from "@testing-library/user-event";
 import BeersPage from "./BeersPage";
-import { createMemoryHistory } from "history";
 
 describe("HomePage component", () => {
   it("should render correctly", () => {
