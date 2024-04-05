@@ -23,6 +23,8 @@ The PUNK API Project is an interactive web application that allows users to expl
 5. Open the provided localhost link in your web browser.
 6. Explore the collection of beers and enjoy discovering new favorites!
 
+Live Demo : [https://athishthayalan.github.io/punkapi/]
+
 ## Project Structure
 
  **src/**: Root directory of the project.
