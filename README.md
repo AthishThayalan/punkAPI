@@ -1,4 +1,4 @@
-# PUNK API Project
+# PUNK API Project :beer:
 
 The PUNK API Project is an interactive web application that allows users to explore and discover a wide variety of beers from the BrewDog brewery. Powered by the Punk API (**API CURRENTLY DOWN SO USING A DATA FILE**), this project provides users with access to extensive information about different beers, including their names, taglines, descriptions, ABV (Alcohol by Volume), and more.
 
